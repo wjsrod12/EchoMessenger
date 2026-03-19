@@ -14,7 +14,7 @@ namespace EchoMessenger
         private void btnSend_Click(object sender, EventArgs e)
         {
             string typed_msg;
-            typed_msg = txtBox.Text;
+            typed_msg = txtBox.Text.Trim();
             lstMsg.Items.Add(typed_msg);
             txtBox.Clear();
             txtBox.Focus();
