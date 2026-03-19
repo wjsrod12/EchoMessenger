@@ -1,4 +1,5 @@
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace EchoMessenger
 {
@@ -7,6 +8,7 @@ namespace EchoMessenger
         public Form1()
         {
             InitializeComponent();
+            txtBox.Focus();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -16,13 +18,21 @@ namespace EchoMessenger
             lstMsg.Items.Add(typed_msg);
             txtBox.Clear();
             txtBox.Focus();
+            if (string.IsNullOrWhiteSpace(txtBox.Text))
+                return;
 
-            if (txtBox.Text.Trim() != "")
+        }
+
+
+
+        private void txtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                lstMsg.Items.Add(txtBox.Text);
-                txtBox.Clear();
-                txtBox.Focus();
+                if (string.IsNullOrWhiteSpace(txtBox.Text))
+                    return;
             }
         }
+
     }
 }

@@ -55,12 +55,14 @@
             // 
             // btnSend
             // 
+            btnSend.BackColor = Color.PapayaWhip;
+            btnSend.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
             btnSend.Location = new Point(514, 369);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(110, 36);
+            btnSend.Size = new Size(110, 43);
             btnSend.TabIndex = 2;
-            btnSend.Text = "button1";
-            btnSend.UseVisualStyleBackColor = true;
+            btnSend.Text = "Send";
+            btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             // 
             // txtBox
@@ -72,6 +74,7 @@
             // 
             // Form1
             // 
+            AcceptButton = btnSend;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
