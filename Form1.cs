@@ -24,7 +24,6 @@ namespace EchoMessenger
         }
 
 
-
         private void txtBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -36,3 +35,5 @@ namespace EchoMessenger
 
     }
 }
+
+
